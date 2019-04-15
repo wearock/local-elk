@@ -11,6 +11,7 @@ elasticsearch:
 logstash:
   image: logstash:6.6.2
   container_name: ingestor_logstash
+  restart: always
   environment:
     - ES_JAVA_OPTS=-Xmx256m -Xms256m
   volumes:
